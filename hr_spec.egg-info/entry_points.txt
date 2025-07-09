@@ -1,0 +1,2 @@
+[console_scripts]
+hr_spec = hr_spec.cli:main
