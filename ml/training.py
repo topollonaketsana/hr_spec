@@ -13,11 +13,10 @@ def train_star_classifier(data= '/hr_spec/ml/data/refined_data/6_class.csv', mod
             'Spectral Class']
     
     if not all(col in df.columns for col in cols):
-        raise ValueError('Column {cols} not found from dataframe')
+        raise ValueError(f'Column {cols} not found from dataframe')
     
 
     # define label and input features
     X = df[['Temperature (K)', 'Luminosity(L/Lo)', 'Radius(R/Ro)',
             'Absolute magnitude(Mv)', 'Star type', 'Star color']]
     y = df['Spectral Class']
-    
