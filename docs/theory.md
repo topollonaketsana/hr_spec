@@ -1,9 +1,9 @@
 __________________________________________________________________________________________________________________________________________________
 
-# The theory behind HR-spec
+## The theory behind HR-spec
 This document explains the scientific foundation for the HR-Spec package. It covers the Hertzsprung–Russell diagram, stellar evolution, physical scaling laws, and the motivation for applying machine learning in stellar classification.
 
-# The HR diagram
+## The HR diagram
 The **HR Diagram** is an important tool in astrophysics that models stars according to:
 - Surface Temperature (in Kelvin), decreasing to the right.
 - Luminosity (in solar units, $L_\odot $)
@@ -18,7 +18,7 @@ The **HR Diagram** is an important tool in astrophysics that models stars accord
 | Supergiants       | Bright, massive stars at end of life                |
 
 
-# Stellar Life Cycle 
+## Stellar Life Cycle 
 
 A star's evolution depends highly on its **mass**. Here’s a simplified process for life of a star:
 
@@ -28,11 +28,11 @@ A star's evolution depends highly on its **mass**. Here’s a simplified process
   - Low mass → Red Giant → Planetary Nebula → White Dwarf
   - High mass → Red Supergiant → Supernova → Neutron Star / Black Hole
 
-  _________________________________________________________________________________________________________________________________________________
+_________________________________________________________________________________________________________________________________________________
 
-  # Physical relations (scalling)
+## Physical relations (scalling)
 
-  ### Luminosity–Mass Relation:
+### Luminosity–Mass Relation:
 
 
 $L \propto M^{3.5}$
