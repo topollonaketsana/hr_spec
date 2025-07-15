@@ -46,4 +46,29 @@ $R \propto M^{0.5}$
 
 
 
+
+
+
+### Lifetime Estimate:
+
+$
+\tau \propto \frac{1}{M^{2.5}} \quad \text{(approximation)}
+$
+
+In HR-Spec we include the metalisity z:
+
+$
+\tau \approx \frac{10}{M} \cdot (1 - 0.1 \cdot Z)
+$
+
+Where:
+- $M$ = stellar mass (solar units)
+- $Z$ = metallicity
+- $\tau$ = main-sequence lifetime (Gyr)
+
+
+
+
+
+
 ___________________________________________________________________________________________________________________________________________________
