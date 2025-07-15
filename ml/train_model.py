@@ -7,7 +7,7 @@ def train_star_classifier(data= 'ml/data/refined_data/6_class.csv', k= 3):
         
         '''
         load dataset 
-        '''
+        ''' 
         
         df = pd.read_csv(data)
 
@@ -19,8 +19,8 @@ def train_star_classifier(data= 'ml/data/refined_data/6_class.csv', k= 3):
         if not all(col in df.columns for col in cols):
                 raise ValueError(f'Missing columns in dataset. Required: {cols}')
         
-        # Convert categorical `Star color` to numerical
-        df['Star color'] = df['Star color'].astype('category').cat.codes
+        # Convert categorical `Star color` to numerical, stripping whitespace
+        df['Star color'] = df['Star color'].str.strip().astype('category').cat.codes
 
         # label and input features
         X = df[['Temperature (K)', 'Luminosity(L/Lo)', 'Radius(R/Ro)',
@@ -31,7 +31,7 @@ def train_star_classifier(data= 'ml/data/refined_data/6_class.csv', k= 3):
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size= 0.2, random_state= 42)
 
         # Train and evaluate
-        model = KNNClassifier(k= 3)
+        model = KNNClassifier(k= k)
         model.fit(X_train, y_train)
         accuracy = model.score(X_test, y_test)
 

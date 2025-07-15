@@ -32,7 +32,7 @@ class KNNClassifier(BaseEstimator, ClassifierMixin):
 
         self : object
             Returns self.
-                '''
+                ''' 
 
         X, y = check_X_y(X, y)
         self.X_train_ = self.scaler.fit_transform(X)
