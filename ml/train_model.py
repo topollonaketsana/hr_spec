@@ -1,7 +1,8 @@
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from classifier import KNNClassifier
-import joblib
+from sklearn.metrics import classification_report
+
 
 def train_star_classifier(data= 'ml/data/refined_data/6_class.csv', k= 3): 
         
@@ -35,5 +36,11 @@ def train_star_classifier(data= 'ml/data/refined_data/6_class.csv', k= 3):
         model.fit(X_train, y_train)
         accuracy = model.score(X_test, y_test)
 
+
         print(f'Accuracy: {accuracy:.3f}')
-        joblib.dump(model, 'trained_model.pkl')
+        print(classification_report(y_test, model.predict(X_test)))
+
+
+        #joblib.dump(model, 'trained_model.pkl')
+
+train_star_classifier()

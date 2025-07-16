@@ -86,6 +86,8 @@ class KNNClassifier(BaseEstimator, ClassifierMixin):
         
         '''
         Return the accuracy score on the given test data and labels.
+        Accuracy Score = Correct Predictions/Total_predictions
+
         '''
 
         from sklearn.metrics import accuracy_score
